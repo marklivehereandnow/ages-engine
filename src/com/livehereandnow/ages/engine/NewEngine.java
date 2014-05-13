@@ -164,6 +164,13 @@ public class NewEngine {
 //            return "   " + user + ", not your turn!";
 //        }
 //    }
+    public boolean doCmd(int id) throws IOException, AgesException {
+//        return field.
+        field.showCardInfo(id);
+        
+        return true;
+    }
+    
     public boolean doCmd(String keyword) throws IOException, AgesException {
         switch (keyword) {
 //           case "new-game"://v0.52

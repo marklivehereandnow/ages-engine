@@ -72,7 +72,15 @@ public class Main {
         keyword = tokens.get(0);//指令的關鍵字是第0個字，例如take 3的take
 
         if (tokenCnt == 1) {//如果輸入的是一個字的話
-            return engine.doCmd(keyword);
+            
+            try{
+                int id=Integer.parseInt(keyword);
+                return engine.doCmd(id);
+            }catch(Exception ex){
+                return engine.doCmd(keyword);
+            }
+            
+            
         }
         if (tokenCnt == 2) {//如果輸入的是2個字的話
             try {
